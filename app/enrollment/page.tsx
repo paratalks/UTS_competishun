@@ -65,9 +65,8 @@ export default function EnrollmentForm() {
     },
   });
   const { toast } = useToast();
-  const amount = "1";
+  const amount = "449";
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
     setLoading(true);
     processPayment();
 
@@ -124,7 +123,7 @@ export default function EnrollmentForm() {
             setLoading(false);
             alert("payment succeed");
             router.push(
-              `/thankyou?name=${form.getValues("name")}&phone=${form.getValues("phone")}&class=${form.getValues("class")}&email=${form.getValues("email")}&transactionId=${response.razorpay_payment_id}&orderId=${response.razorpay_order_id}&currency=INR&amount=3999`,
+              `/thankyou?name=${form.getValues("name")}&phone=${form.getValues("phone")}&class=${form.getValues("class")}&email=${form.getValues("email")}&transactionId=${response.razorpay_payment_id}&orderId=${response.razorpay_order_id}&currency=INR&amount=449`,
             );
           } else {
             setLoading(false);
