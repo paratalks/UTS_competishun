@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import ScribledHighlightedText from "@/components/ScribledHighlightedText";
 
-import { feature_Row1, feature_Row2, icons, illustrations } from "@/constants";
+import { feature_Row1, icons, illustrations } from "@/constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { getFeaturesData } from "@/lib/fetchData";
