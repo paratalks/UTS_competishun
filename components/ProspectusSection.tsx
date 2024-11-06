@@ -127,7 +127,11 @@ const ProspectusSection = () => {
                         "bg-foreground text-background group-hover:bg-foreground secondary-button-animation rounded-xl w-fit px-4 py-2 flex flex-row font-bold gap-x-2"
                       }
                     >
-                      Join Now
+                      {relatedCourse &&
+                      relatedCourse.documents[i].link != null &&
+                      relatedCourse.documents[i].link != "/"
+                        ? "Join Now"
+                        : "Coming Soon"}
                       <ArrowRight />
                     </motion.button>
                   </a>

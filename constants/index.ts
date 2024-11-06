@@ -108,24 +108,24 @@ export const heroSectionHastags = [
 
 export const Faqs = [
   {
-    question: "Will I get Physical Study Material?",
+    question: "Why should I choose Competishun’s Ultimate Test Series (UTS)?",
     answer:
-      "With this Course Purchase, you will get only Digital Study Material like DPP’s and their respective Text and Video Solution. Physical Study Material is not provided with this Short term Course.",
+      "Competishun’s UTS offers a realistic JEE exam experience, with 24/7 access to both video and text solutions. This allows you to review solutions anytime, tackle challenges, and keep improving.",
   },
   {
-    question: "Will Classes be any Live Classes?",
+    question: "What guidance will I receive in UTS?",
     answer:
-      "There will be only Recorded Scheduled Lectures will be provided. In week there will be LIVE INTERACTION Session for your guidance for 30 Minutes.",
+      "Our expert mentors provide comprehensive guidance at every step, offering valuable resources and insights crafted to help you perform at your best.",
   },
   {
-    question: "Will Test be conducted in this course? ",
+    question: "How do I join the Ultimate Test Series?",
     answer:
-      "Test will be conducted on weekly basis as per test grid that will be provided to you along with the course. Test will be conducted on COMPETISHUN DIGITAL APP / WEBSITE and we will share the complete details in your Official Support Prior to your 1st test.",
+      "Simply sign up on the Competishun website, select UTS 2025 under the Test Series section, enter your mobile number, make the payment, and receive your unique username and password.",
   },
   {
-    question: "Will Doubt clearing session will be conducted?",
+    question: "Where can I access my tests?",
     answer:
-      "you can ask your doubts in your doubt groups tagging faculties and you will get a reply at the earliest.",
+      'Once registered, go to the "My Exams" section on your dashboard to access all tests and begin your preparation.',
   },
   {
     question: "How Do you contact Support Staff of Competishun?",
@@ -226,49 +226,34 @@ export const mentors = [
 
 export const feature_Row1 = [
   {
-    title: "Expert Faculty",
-    desc: "Our experienced and highly qualified instructors are experts in their respective fields, providing students with top-notch guidance, personalized attention, and valuable insights to tackle the JEE Main.",
+    title: "20 Full Syllabus Tests",
+    desc: "Each test is designed according to the latest JEE Main pattern (20+5), making sure you’re fully prepared for the real exam and to Challenge yourself to see where you stand!",
     image: illustrations.illustration1,
   },
   {
-    title: "Rigorous Curriculum",
-    desc: "The course is meticulously crafted to cover the entire JEE Main syllabus. We prioritize essential topics, offer in-depth explanations, and provide ample practice material to strengthen your understanding",
+    title: "Complete Text & Video Solutions",
+    desc: "Get in-depth solutions for every question with both text and video explanations, you’ll understand every concept inside and out.",
     image: illustrations.illustration1,
   },
   {
-    title: "Time-Efficient",
-    desc: "Designed as a condensed program, the crash course optimizes your preparation time, making it ideal for students with tight schedules or those looking for a last-minute refresher",
+    title: "Innovative Test Patterns",
+    desc: "Assertion-Reason and Graph based questions to tackle critical thinking questions on Physics, Chemistry, and Math develop your skills on complex relationship-based questions",
     image: illustrations.illustration1,
   },
   {
-    title: "Mock Tests and Practice Papers",
-    desc: "To gauge your progress and build confidence, we offer a series of mock tests and practice papers that simulate the actual exam.",
+    title: "Detailed Performance Analytics",
+    desc: "Understand your strengths and areas of improvement with Competishun’s detailed analytics, helping you strategize better for your preparation.",
     image: illustrations.illustration1,
   },
   {
-    title: "Doubt Resolution",
-    desc: "Our dedicated doubt-clearing sessions ensure that no question remains unanswered. Feel free to ask questions, seek clarification, and reinforce your topics",
+    title: "Based on 2025 New pattern ",
+    desc: "UTS is designed to align closely with the latest JEE exam pattern of 2025 , Making sure that you’re fully prepared for the actual exam format and question types.",
     image: illustrations.illustration1,
   },
   {
-    title: "Digital Study Materials",
-    desc: "Our meticulously curated Digital study materials resources will be provided",
+    title: "Time Management Insights",
+    desc: "Master the art of time management with personalised feedback on the time spent per question and section",
     image: illustrations.illustration1,
-  },
-];
-
-export const feature_Row2 = [
-  {
-    title: "Mock Tests and Practice Papers",
-    desc: "To gauge your progress and build confidence, we offer a series of mock tests and practice papers that simulate the actual exam.",
-  },
-  {
-    title: "Doubt Resolution",
-    desc: "Our dedicated doubt-clearing sessions ensure that no question remains unanswered. Feel free to ask questions, seek clarification, and reinforce your topics",
-  },
-  {
-    title: "Digital Study Materials",
-    desc: "Our meticulously curated Digital study materials resources will be provided",
   },
 ];
 

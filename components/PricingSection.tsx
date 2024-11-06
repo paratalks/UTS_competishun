@@ -5,7 +5,7 @@ import Image from "next/image";
 import { icons } from "@/constants";
 import { motion } from "framer-motion";
 
-const PricingSection = ({ courseFees = "2999" }) => {
+const PricingSection = ({ courseFees = "449" }) => {
   return (
     <section
       className={
@@ -44,11 +44,11 @@ const PricingSection = ({ courseFees = "2999" }) => {
                 }
               >
                 <h1 className={" text-3xl sm:text-6xl lg:text-7xl font-bold"}>
-                  Ultimate Revision Course for JEE Main - 2025
+                  {"Join The Ultimate Test Series for JEE "}
+                  <ScribledHighlightedText textInput={"2025"} path={""} />
                 </h1>
                 <p>
-                  {`Revise Smarter, Score Higher with Experts mentors in
-                    Competishun. Let's Crack JEE 2025`}
+                  {`Prepare Smarter, Join today and give your preparation the ultimate edge. Let's Crack JEE 2025!`}
                 </p>
                 <a href="/enrollment">
                   <motion.button

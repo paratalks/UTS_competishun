@@ -334,7 +334,7 @@ export default function Home() {
                 " text-xs sm:text-xl lg:text-lg mt-6 sm:mt-3 text-center xl:w-1/2 w-full mb-6 lg:mb-2 max-sm:text-gray-500"
               }
             >
-              {`The Competishun High Achiever’s Main Program (CHAMP - 2025) is a specialized revision course designed to help students unlock excel in the JEE Main examination. `}
+              {`Prepare to conquer JEE 2025 with Ultimate Test Series (UTS) designed to match the latest JEE Main and Advance pattern, making sure you're fully prepared for the actual exam`}
             </p>
             <a href="#pricing-section" className={"z-20"}>
               <motion.button
@@ -431,7 +431,8 @@ export default function Home() {
 
         <FaqSection />
         <div className={" flex flex-col items-center"}>
-          <PricingSection courseFees={data && data.documents[0].price} />
+          {/*<PricingSection courseFees={data && data.documents[0].price} />*/}
+          <PricingSection />
         </div>
         <StatisticSection />
 
@@ -480,14 +481,14 @@ export default function Home() {
                         </li>
                         <li className="mb-4 hover:text-white">
                           <a
-                            href="https://champ.competishun.in/"
+                            href="https://uts.competishun.in/"
                             className="hover:underline"
                           >
                             FAQ
                           </a>
                         </li>
                         <li className={"hover:text-white"}>
-                          <a href="https://champ.competishun.in/">FAQ</a>
+                          <a href="https://uts.competishun.in/">FAQ</a>
                         </li>
                       </ul>
                     </div>
@@ -518,7 +519,7 @@ export default function Home() {
                 <span className="text-sm  sm:text-center  text-gray-400">
                   © 2024{" "}
                   <a
-                    href="https://champ.competishun.in/"
+                    href="https://uts.competishun.in/"
                     className="hover:underline"
                   >
                     Competishun™
