@@ -28,6 +28,7 @@ import { useState } from "react";
 import { redirect } from "next/navigation";
 import { useRouter } from "next/navigation";
 import Script from "next/script";
+import { createEnrollment } from "@/actions/index.action";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -97,6 +98,16 @@ export default function EnrollmentForm() {
   };
   const processPayment = async () => {
     try {
+      const data = {
+        name: form.getValues("name"),
+        phone: form.getValues("phone"),
+        email: form.getValues("email"),
+        class: form.getValues("class"),
+        city: form.getValues("city"),
+        state: form.getValues("state"),
+        course: "UTS",
+      };
+      await createEnrollment(data);
       const orderId: string = await createOrderId();
       const options = {
         key: process.env.key_id,
