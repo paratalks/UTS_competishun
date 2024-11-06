@@ -154,7 +154,7 @@ export default function Home() {
                   "absolute hidden sm:flex select-none sm:w-14 w-10 top-1/2 left-[20%] -z-40"
                 }
                 src={icons.rolledDegree}
-                alt={"Rolled Degree Icom"}
+                alt={"Rolled Degree Icon"}
               />
               <motion.img
                 animate={{

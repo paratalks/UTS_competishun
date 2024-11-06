@@ -228,26 +228,32 @@ export const feature_Row1 = [
   {
     title: "Expert Faculty",
     desc: "Our experienced and highly qualified instructors are experts in their respective fields, providing students with top-notch guidance, personalized attention, and valuable insights to tackle the JEE Main.",
+    image: illustrations.illustration1,
   },
   {
     title: "Rigorous Curriculum",
     desc: "The course is meticulously crafted to cover the entire JEE Main syllabus. We prioritize essential topics, offer in-depth explanations, and provide ample practice material to strengthen your understanding",
+    image: illustrations.illustration1,
   },
   {
     title: "Time-Efficient",
     desc: "Designed as a condensed program, the crash course optimizes your preparation time, making it ideal for students with tight schedules or those looking for a last-minute refresher",
+    image: illustrations.illustration1,
   },
   {
     title: "Mock Tests and Practice Papers",
     desc: "To gauge your progress and build confidence, we offer a series of mock tests and practice papers that simulate the actual exam.",
+    image: illustrations.illustration1,
   },
   {
     title: "Doubt Resolution",
     desc: "Our dedicated doubt-clearing sessions ensure that no question remains unanswered. Feel free to ask questions, seek clarification, and reinforce your topics",
+    image: illustrations.illustration1,
   },
   {
     title: "Digital Study Materials",
     desc: "Our meticulously curated Digital study materials resources will be provided",
+    image: illustrations.illustration1,
   },
 ];
 
