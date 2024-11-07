@@ -38,9 +38,6 @@ const FooterBanner = () => {
           >
             <h2 className={"text-5xl font-bold leading-[1.3]"}>
               Prepare for your dream with best institute.
-              <p className={"text-start text-2xl"}>
-                Free for 97+ Percentilers.
-              </p>
             </h2>
             <div className={"w-full gradientBorder rounded-2xl"}>
               <a href="/enrollment" className={"w-full h-full"}>

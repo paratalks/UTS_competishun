@@ -5,7 +5,7 @@ import { blurs, constData, icons, images, scribles, sounds } from "@/constants";
 import React, { useEffect, useRef, useState } from "react";
 import useSound from "use-sound";
 import { motion, useAnimate } from "framer-motion";
-import { HeadphonesIcon } from "lucide-react";
+import { Book, HeadphonesIcon } from "lucide-react";
 import { primary } from "@/constants/colors";
 import HeroSectionSlider from "@/components/HeroSectionSlider";
 import YoutubeRecom from "@/components/YoutubeRecom";
@@ -243,7 +243,7 @@ export default function Home() {
                     "rounded-2xl bg-foreground px-5 py-3 flex items-center justify-center lg:gap-x-5 sm:gap-x-2"
                   }
                 >
-                  <HeadphonesIcon
+                  <Book
                     color={primary}
                     className={"lg:size-8 sm:size-4 size-3"}
                   />
@@ -252,9 +252,7 @@ export default function Home() {
                       "text-black text-[0.5rem] sm:text-xs lg:text-xl font-extrabold flex flex-row gap-x-5"
                     }
                   >
-                    {data && data.documents.length > 0
-                      ? data.documents[0].heroSectionStats1
-                      : "24 * 7 Doubt Solving"}
+                    {"Guided Mentoring"}
                   </p>
                 </div>
               </motion.div>
@@ -284,9 +282,7 @@ export default function Home() {
                       "text-black text-[0.5rem] sm:text-xs lg:text-xl font-extrabold flex flex-row gap-x-5"
                     }
                   >
-                    {data && data.documents.length > 0
-                      ? data.documents[0].heroSectionStats2
-                      : "24 * 7 Doubt Solving"}
+                    {"Innovative Test Patterns"}
                   </p>
                 </div>
               </motion.div>
@@ -302,10 +298,9 @@ export default function Home() {
           >
             <h1
               className={
-                "hero-title text-5xl sm:text-7xl lg:text-5xl xl:text-7xl text-wrap font-extrabold text-center"
+                "hero-title text-4xl sm:text-6xl lg:text-4xl xl:text-7xl text-wrap font-extrabold text-center"
               }
             >
-              {`Get into `}
               <span
                 className={
                   "bg-gradient-to-r relative from-primary via-50% via-white to-blue-500 text-transparent bg-clip-text"
@@ -320,14 +315,14 @@ export default function Home() {
                 />
                 {` IIT `}
               </span>
-              {`with Competishun,`}
+              {` Success with Ultimate Test Series`}
             </h1>
             <h1
               className={
-                "hero-title text-5xl sm:text-7xl mt-2 lg:text-5xl xl:text-7xl font-extrabold text-wrap text-center"
+                "hero-title text-4xl sm:text-6xl mt-2 lg:text-4xl xl:text-7xl font-extrabold text-wrap text-center"
               }
             >
-              <span className={"text-primary"}>99 Percentile</span> Dream begins
+              <span className={"text-primary"}>99 Percentile </span> in JEE Main
             </h1>
             <p
               className={

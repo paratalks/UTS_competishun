@@ -72,12 +72,12 @@ const PricingSection = ({ courseFees = "449" }) => {
               >
                 <div
                   className={
-                    " bg-primary flex h-full flex-col p-10 items-center gap-y-6 rounded-2xl"
+                    " bg-primary flex h-full flex-col p-10 items-start gap-y-6 rounded-2xl"
                   }
                 >
                   <div
                     className={
-                      "flex flex-col items-center gap-y-6 h-fit relative"
+                      "flex flex-col w-full items-center gap-y-6 h-fit relative"
                     }
                   >
                     <h3 className={"text-2xl font-bold"}> Course Fees </h3>
@@ -105,7 +105,7 @@ const PricingSection = ({ courseFees = "449" }) => {
                   </div>
                   <ul
                     className={
-                      "gap-y-6 flex flex-col h-full text-sm sm:text-xl lg:text-2xl"
+                      "gap-y-6 flex items-start flex-col h-full text-sm sm:text-xl lg:text-2xl"
                     }
                   >
                     <li className={"flex flex-row gap-x-2"}>
@@ -113,14 +113,28 @@ const PricingSection = ({ courseFees = "449" }) => {
                         className={"bg-foreground p-1 rounded-full"}
                         color={"#F15E04"}
                       />{" "}
-                      Achieve 97+ percentile in JEE Mains 2025
+                      Based on 2025 New pattern
                     </li>
                     <li className={"flex flex-row gap-x-2"}>
                       <Check
                         className={"bg-foreground p-1 rounded-full"}
                         color={"#F15E04"}
                       />
-                      Secure a rank under 25k in JEE Advanced
+                      Get the feel of JEE environment
+                    </li>{" "}
+                    <li className={"flex flex-row gap-x-2"}>
+                      <Check
+                        className={"bg-foreground p-1 rounded-full"}
+                        color={"#F15E04"}
+                      />
+                      Time Management Insights
+                    </li>
+                    <li className={"flex flex-row gap-x-2"}>
+                      <Check
+                        className={"bg-foreground p-1 rounded-full"}
+                        color={"#F15E04"}
+                      />
+                      Guided Performance Monitoring
                     </li>
                   </ul>
                 </div>
