@@ -10,6 +10,8 @@ export const images = {
   guyWithTshirt: "/assets/images/guyWithTshirt.png",
   halfCircleNonPrimary: "/assets/images/halfCircleNonPrimary.svg",
   results: "/assets/images/result.jpeg",
+  jeeMainResults: "/assets/images/jeeMainResult.png",
+  jeeAdvanceResults: "/assets/images/jeeAdvanceResult.png",
 };
 
 export const aboutusImages = [
