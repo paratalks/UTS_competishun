@@ -38,8 +38,8 @@ const ResultShowcase = () => {
           <div className={"flex flex-col w-fit"}>
             <h1
               className={"text-4xl text-start w-full font-bold"}
-            >{`JEE Advance Results`}</h1>
-            <p>{`All Ranks under 25k AIR only`}</p>
+            >{`JEE Advanced Results`}</h1>
+            <p>{`All Ranks under 10k AIR only`}</p>
           </div>
           <Image
             width={2000}
