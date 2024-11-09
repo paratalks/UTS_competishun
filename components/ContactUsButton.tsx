@@ -39,7 +39,7 @@ const ContactUsButton = ({ variant = "primary", openDialog = false }) => {
       setTimeout(() => {
         setIsFormOpen(true);
         intervalRef.current = true;
-      }, 10000);
+      }, 3000);
     }
   }, []);
   const handleFormSubmit = async (event: any) => {
@@ -78,7 +78,7 @@ const ContactUsButton = ({ variant = "primary", openDialog = false }) => {
         </button>
       </DialogTrigger>
       <DialogContent
-        className="sm:max-w-md rounded-3xl p-8 bg-primary"
+        className="sm:max-w-md rounded-3xl p-4 sm:p-8 bg-primary scale-75 sm:scale-100"
         style={{ borderRadius: 20 }}
       >
         <DialogHeader>
@@ -228,6 +228,7 @@ const ContactUsButton = ({ variant = "primary", openDialog = false }) => {
           </div>
         </form>
         <button
+          id={"dialogClose"}
           onClick={() => {
             setIsFormOpen(false);
             intervalRef.current = false;
