@@ -11,6 +11,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 import { createQuery } from "@/actions/index.action";
 import {
   Select,
@@ -34,6 +35,7 @@ const LeadFormWidget = ({ variant = "primary", openDialog = false }) => {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const router = useRouter();
   const intervalRef: React.MutableRefObject<boolean> = useRef(false);
+  const [screen, setScreen] = useState({ width: 0, height: 0 });
   useEffect(() => {
     if (openDialog && !intervalRef.current) {
       setTimeout(() => {
@@ -41,6 +43,17 @@ const LeadFormWidget = ({ variant = "primary", openDialog = false }) => {
         intervalRef.current = true;
       }, 10000);
     }
+  }, []);
+  useEffect(() => {
+    setScreen({ width: window.innerWidth, height: window.innerHeight });
+    const handleResize = () => {
+      setScreen({ width: window.innerWidth, height: window.innerHeight });
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize); // Clean up on unmount
+    };
   }, []);
   const handleFormSubmit = async (event: any) => {
     event.preventDefault();
@@ -68,16 +81,26 @@ const LeadFormWidget = ({ variant = "primary", openDialog = false }) => {
   return (
     <Dialog open={isFormOpen}>
       <DialogTrigger asChild>
-        <div className={"fixed bottom-20 right-0 px-4 z-40"}>
+        <motion.div
+          animate={{ opacity: [0.5, 1] }}
+          transition={{
+            repeat: Infinity,
+            duration: 0.5,
+            repeatType: "reverse",
+          }}
+          className={
+            "fixed bottom-0 md:bottom-[50%] md:-right-[3.5%] m-0 z-40 md:-rotate-90"
+          }
+        >
           <button
-            className={`font-bold contact-us-button ${variant}-button-animation flex flex-row bg-${variant} rounded-full p-2 transition-all duration-300`}
+            className={`font-bold contact-us-button ${variant}-button-animation flex flex-col bg-${variant} sm:rounded-t-2xl p-3 transition-all duration-300 w-screen md:w-fit items-center text-2xl`}
             onClick={() => {
               setIsFormOpen(true);
             }}
           >
-            <CircleHelp size={40} />
+            {"Enquire Now"}
           </button>
-        </div>
+        </motion.div>
       </DialogTrigger>
       <DialogContent
         className="sm:max-w-md rounded-3xl p-8 bg-primary"
