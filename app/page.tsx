@@ -28,6 +28,7 @@ import {
 import { Models } from "appwrite";
 import LeadFormWidget from "@/components/LeadFormWidget";
 import ResultShowcase from "@/components/ResultShowcase";
+import FormPopup from "@/components/FormPopup";
 export default function Home() {
   const [clipPath, setClipPath] = useState("circle(0%)");
   const imageContainerRef = useRef(null);
@@ -121,6 +122,7 @@ export default function Home() {
         id="chat-widget"
         data-key="670f87c42f6b943716677af3"
       ></div>
+      <FormPopup />
       <LeadFormWidget />
       <div className={"w-11/12 flex flex-col"}>
         <section

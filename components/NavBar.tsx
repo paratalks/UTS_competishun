@@ -101,7 +101,7 @@ const NavBar = () => {
           <p>{"8888-0000-21"}</p>
         </div>
 
-        <ContactUsButton openDialog={true} />
+        <ContactUsButton />
       </div>
     </div>
   );

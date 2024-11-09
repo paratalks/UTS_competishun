@@ -22,7 +22,7 @@ import {
 import { useRouter } from "next/navigation";
 import { X } from "lucide-react";
 
-const ContactUsButton = ({ variant = "primary" }) => {
+const FormPopup = ({ variant = "primary", openDialog = true }) => {
   const [formDataTemp, setFormData] = useState({
     studentName: "",
     studentPhone: "",
@@ -34,6 +34,14 @@ const ContactUsButton = ({ variant = "primary" }) => {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const router = useRouter();
   const intervalRef: React.MutableRefObject<boolean> = useRef(false);
+  useEffect(() => {
+    if (openDialog && !intervalRef.current) {
+      setTimeout(() => {
+        setIsFormOpen(true);
+        intervalRef.current = true;
+      }, 10000);
+    }
+  }, []);
   const handleFormSubmit = async (event: any) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
@@ -59,16 +67,6 @@ const ContactUsButton = ({ variant = "primary" }) => {
   };
   return (
     <Dialog open={isFormOpen}>
-      <DialogTrigger asChild>
-        <button
-          onClick={() => {
-            setIsFormOpen(true);
-          }}
-          className={` text-xs sm:text-lg font-bold w-fit contact-us-button ${variant}-button-animation flex flex-row bg-${variant} rounded-xl py-2.5 px-5 transition-all duration-300`}
-        >
-          {"Contact Us"}
-        </button>
-      </DialogTrigger>
       <DialogContent
         className="sm:max-w-md rounded-3xl p-4 sm:p-8 bg-primary scale-75 sm:scale-100"
         style={{ borderRadius: 20 }}
@@ -234,4 +232,4 @@ const ContactUsButton = ({ variant = "primary" }) => {
     </Dialog>
   );
 };
-export default ContactUsButton;
+export default FormPopup;
