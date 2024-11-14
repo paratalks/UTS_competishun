@@ -5,7 +5,11 @@ import Image from "next/image";
 import { icons, illustrations, images, prospectusCategory } from "@/constants";
 import { motion } from "framer-motion";
 import PricingSection from "@/components/PricingSection";
-import { getRelatedCourseData } from "@/lib/fetchData";
+import {
+  getRelatedBooks,
+  getRelatedCourseData,
+  getRelatedTestSeries,
+} from "@/lib/fetchData";
 import { Models } from "appwrite";
 
 const ProspectusSection = () => {
@@ -13,8 +17,17 @@ const ProspectusSection = () => {
   const [selectedCategory, setSelectedCategory] = useState(0);
   const [relatedCourse, setRelatedCourses] =
     useState<Models.DocumentList<Models.Document>>();
+  const [relatedTestSeries, setRelatedTestSeries] =
+    useState<Models.DocumentList<Models.Document>>();
+  const [relatedBooks, setRelatedBooks] =
+    useState<Models.DocumentList<Models.Document>>();
+  const relatedData = [relatedCourse, relatedTestSeries, relatedBooks];
   const fetchData = async () => {
     await getRelatedCourseData().then((res) => setRelatedCourses(res));
+    await getRelatedTestSeries().then((res) => setRelatedTestSeries(res));
+    await getRelatedBooks().then((res) => {
+      setRelatedBooks(res);
+    });
   };
   useEffect(() => {
     fetchData();
@@ -96,8 +109,9 @@ const ProspectusSection = () => {
               "flex flex-col sm:flex-row justify-center  gap-y-10  gap-x-14 w-full flex-wrap "
             }
           >
-            {(relatedCourse && relatedCourse.documents.length > 0
-              ? relatedCourse.documents
+            {(relatedData[selectedCategory] &&
+            relatedData[selectedCategory].documents.length > 0
+              ? relatedData[selectedCategory].documents
               : []
             ).map((_: any, i: any) => (
               <div
@@ -115,21 +129,28 @@ const ProspectusSection = () => {
                     <Check color={"#F15E04"} />
                   </div>
                   <h3 className={"text-2xl font-extrabold h-1/2"}>
-                    {relatedCourse && relatedCourse.documents[i].title}
+                    {relatedData[selectedCategory] &&
+                      relatedData[selectedCategory].documents[i].title}
                   </h3>
                   <p className={"text-sm text-gray-300"}>
-                    {relatedCourse && relatedCourse.documents[i].desc}
+                    {relatedData[selectedCategory] &&
+                      relatedData[selectedCategory].documents[i].desc}
                   </p>
-                  <a href={relatedCourse && relatedCourse.documents[i].link}>
+                  <a
+                    href={
+                      relatedData[selectedCategory] &&
+                      relatedData[selectedCategory].documents[i].link
+                    }
+                  >
                     <motion.button
                       whileHover={{ scale: 1.1 }}
                       className={
                         "bg-foreground text-background group-hover:bg-foreground secondary-button-animation rounded-xl w-fit px-4 py-2 flex flex-row font-bold gap-x-2"
                       }
                     >
-                      {relatedCourse &&
-                      relatedCourse.documents[i].link != null &&
-                      relatedCourse.documents[i].link != "/"
+                      {relatedData[selectedCategory] &&
+                      relatedData[selectedCategory].documents[i].link != null &&
+                      relatedData[selectedCategory].documents[i].link != "/"
                         ? "Join Now"
                         : "Coming Soon"}
                       <ArrowRight />

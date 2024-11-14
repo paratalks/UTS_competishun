@@ -122,7 +122,7 @@ export default function Home() {
         id="chat-widget"
         data-key="670f87c42f6b943716677af3"
       ></div>
-      <FormPopup />
+
       <LeadFormWidget />
       <div className={"w-11/12 flex flex-col"}>
         <section
